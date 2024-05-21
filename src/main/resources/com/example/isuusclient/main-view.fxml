@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" styleClass="tableW" stylesheets="@collor.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView prefHeight="328.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Фамилия" />
+          <TableColumn prefWidth="75.0" text="Имя" />
+            <TableColumn prefWidth="75.0" text="Отчество" />
+            <TableColumn prefWidth="75.0" text="Группа" />
+            <TableColumn prefWidth="113.0" text="Специальность" />
+            <TableColumn prefWidth="143.0" text="№ Зачетной книжки" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" stylesheets="@collor.css" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button minWidth="70.0" mnemonicParsing="false" prefHeight="25.0" text="Список групп" />
+            <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" prefHeight="25.0" text="Список специальностей" />
+            <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" text="Список предметов" />
+            <TextField prefHeight="25.0" prefWidth="160.0" />
+            <Button graphicTextGap="3.0" minWidth="60.0" mnemonicParsing="false" prefHeight="25.0" text="Поиск">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="33.0" fitWidth="45.0">
+               <image>
+                  <Image url="@../../../../../../../../../Downloads/pngwing.com%20(7).png" />
+               </image>
+            </ImageView>
+        </buttons>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <styleClass>
+            <String fx:value="anchorPaCity" />
+            <String fx:value="Hbox" />
+         </styleClass>
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+      </ButtonBar>
+   </top>
+   <bottom>
+      <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@collor.css" BorderPane.alignment="BOTTOM_LEFT">
+         <buttons>
+            <Button mnemonicParsing="false" text="Добавить" textAlignment="CENTER" />
+            <Button mnemonicParsing="false" text="Изменить" />
+            <Button mnemonicParsing="false" text="Удалить" />
+         </buttons>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <styleClass>
+            <String fx:value="anchorPaCity" />
+            <String fx:value="Hbox" />
+         </styleClass>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </ButtonBar>
+   </bottom>
+</BorderPane>

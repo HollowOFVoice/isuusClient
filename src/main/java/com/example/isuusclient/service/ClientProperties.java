@@ -4,6 +4,7 @@ package com.example.isuusclient.service;
 import com.example.isuusclient.MainApplication;
 import lombok.Getter;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -46,7 +47,7 @@ public class ClientProperties {
             System.out.println(input);
             properties.load(input);//загрузка свойства из файла
             allStudent = properties.getProperty("student.getAll");
-            fineByRec = properties.getProperty("student.fineById");
+            fineByRec = properties.getProperty("student.byRec");
             saveStudent = properties.getProperty("student.save");
             updateStudent = properties.getProperty("student.update");
 

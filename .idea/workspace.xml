@@ -5,38 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d74ef24c-34ea-4b49-a10a-5b5d10a0c148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Response/BaseResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Response/DataResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Response/ListResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SignInController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/HttpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/JsonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/ad-assessmen-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-group-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-lesson-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-special-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-student-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-user-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/assessmen-list.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/fon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/iscol.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/lesson-list.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/pngwing.com(12).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/special-list.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/user-enter-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/AssessmenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/GroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/LessonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SignInService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SpecialService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/lupa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenAddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/AssessmenEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/AssessmenEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/ad-assessmen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/ad-assessmen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-group-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-group-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-lesson-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-lesson-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/iscol.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/iscol.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +42,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -83,9 +77,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "hiome",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Desktop/isuusClient/src/main/java/com/example/isuusclient",
+    "last_opened_file_path": "C:/Users/Chebotov2021/Desktop/jaba/isuusClient/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,9 +90,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Chebotov2021\Desktop\jaba\isuusClient\src\main\resources" />
+      <recent name="C:\Users\Chebotov2021\Desktop\jaba\isuusClient\src\main\resources\com\example\isuusclient" />
       <recent name="C:\Users\User\Desktop\isuusClient\src\main\java\com\example\isuusclient" />
       <recent name="C:\Users\User\Desktop\isuusClient\src\main\resources\com\example\isuusclient" />
-      <recent name="C:\Users\Chebotov2021\Desktop\jaba\isuusClient\src\main\resources\com\example\isuusclient" />
       <recent name="C:\Users\Chebotov2021\Desktop\jaba\isuusClient\src\main\java\com\example\isuusclient" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -145,6 +140,7 @@
       <workItem from="1716281871253" duration="5291000" />
       <workItem from="1716310948097" duration="6124000" />
       <workItem from="1716318937110" duration="13493000" />
+      <workItem from="1716377753874" duration="6377000" />
     </task>
     <servers />
   </component>
@@ -158,6 +154,40 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="12" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

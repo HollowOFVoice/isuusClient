@@ -1,0 +1,75 @@
+package com.example.isuusclient.service;
+
+import com.example.isuusclient.Response.BaseResponse;
+import com.example.isuusclient.Response.DataResponse;
+import com.example.isuusclient.Response.ListResponse;
+import com.example.isuusclient.entity.GroupsEntity;
+import com.example.isuusclient.entity.LessonsEntity;
+import com.google.gson.reflect.TypeToken;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import lombok.Getter;
+
+import java.lang.reflect.Type;
+
+public class LessonService {
+    @Getter
+    private ObservableList<LessonsEntity> data = FXCollections.observableArrayList();
+    private  final HttpService http = new HttpService();
+    JsonService service = new JsonService();
+    ClientProperties prop = new ClientProperties();
+    private Type dataType = new TypeToken<DataResponse<LessonsEntity>>() {
+    }.getType();
+    private Type listType = new TypeToken<DataResponse<LessonsEntity>>() {
+    }.getType();
+
+
+    public void getAll(){
+        ListResponse<LessonsEntity> data=new ListResponse<>();
+        data = service.getObject(http.get(prop.getAllLessons()),listType);
+        if (data.isSuccess()){
+            this.data.addAll(data.getData());
+            this.data.forEach(System.out::println);
+        } else {
+            throw new RuntimeException(data.getMessage());
+        }
+    }
+
+
+    public void add(LessonsEntity data){
+        String temp = http.post(prop.getSaveLessons(), service.getJson(data));
+        DataResponse<LessonsEntity> respose = service.getObject(temp, dataType);
+        if (respose.isSuccess()){
+            this.data.add(respose.getData());
+
+        }else{
+            throw new RuntimeException(respose.getMessage());
+        }
+    }
+
+    public void update(LessonsEntity after, LessonsEntity before){
+        System.out.println(before);
+        System.out.println(after);
+        String temp = http.put(prop.getUpdateLessons(), service.getJson(after));
+        DataResponse<LessonsEntity> respose = service.getObject(temp, dataType);
+        if (respose.isSuccess()){
+            this.data.remove(before);
+            this.data.add(after);
+        }else{
+            throw new RuntimeException(respose.getMessage());
+        }
+    }
+
+    public void delete(LessonsEntity data){
+        String temp = http.delete(prop.getDeleteLesson(), data.getId());
+        BaseResponse response = service.getObject(temp,BaseResponse.class);
+        if (response.isSuccess()){
+            this.data.remove(data);
+        }else {
+            throw new RuntimeException(response.getMessage());
+        }
+    }
+
+
+
+}

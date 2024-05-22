@@ -29,10 +29,10 @@
       </ButtonBar>
    </bottom>
    <center>
-      <TableView prefHeight="348.0" prefWidth="866.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
+      <TableView fx:id="groupTable" prefHeight="348.0" prefWidth="866.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn prefWidth="113.0" text="Специальность" visible="false" />
-            <TableColumn prefWidth="490.0" styleClass="column" text="Группы" />
+            <TableColumn fx:id="groupColumn" prefWidth="490.0" styleClass="column" text="Группы" />
          </columns>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />

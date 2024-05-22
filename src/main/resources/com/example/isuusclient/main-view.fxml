@@ -18,7 +18,7 @@
         <buttons>
             <ImageView fitHeight="35.0" fitWidth="30.0">
                <image>
-                  <Image url="@../../../../../../../../Downloads/pngwing.com(8).png" />
+                  <Image url="@lupa.png" />
                </image>
             </ImageView>
             <Button graphicTextGap="3.0" minWidth="60.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="177.0" styleClass="buttons" stylesheets="@iscol.css" text="Поиск" textFill="WHITE">
@@ -54,9 +54,9 @@
    <bottom>
       <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="BOTTOM_LEFT">
          <buttons>
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#addOrChangeAssessmen" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
             <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE" />
-            <Button mnemonicParsing="false" onAction="#deleteBookAction" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
+            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
          </buttons>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />

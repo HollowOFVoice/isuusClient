@@ -5,34 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d74ef24c-34ea-4b49-a10a-5b5d10a0c148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenAddController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupAddController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonAddController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialAddController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/StudentsAddController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/AssessmenEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/GroupsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/LessonsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/SpecialsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/StudentsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/UsersEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/collor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Response/BaseResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Response/DataResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Response/ListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SignInController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/HttpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/JsonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/ad-assessmen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-group-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-lesson-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-special-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-student-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-user-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/assessmen-list.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/fon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/iscol.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/lesson-list.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/pngwing.com(12).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/special-list.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/user-enter-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/AssessmenEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/AssessmenEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -49,9 +55,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HollowOFVoice&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HollowOFVoice/isuusClient.git&quot;,
+    &quot;accountId&quot;: &quot;577afbb9-ba57-4afc-97cf-a5906513dcac&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2glp9O7k3SxNkSrjdVMSb3F64IE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -60,25 +78,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Start.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Chebotov2021/Desktop/jaba/isuusClient/src/main/resources/com/example/isuusclient",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Desktop/isuusClient/src/main/java/com/example/isuusclient",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\isuusClient\src\main\java\com\example\isuusclient" />
+      <recent name="C:\Users\User\Desktop\isuusClient\src\main\resources\com\example\isuusclient" />
       <recent name="C:\Users\Chebotov2021\Desktop\jaba\isuusClient\src\main\resources\com\example\isuusclient" />
       <recent name="C:\Users\Chebotov2021\Desktop\jaba\isuusClient\src\main\java\com\example\isuusclient" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.isuusclient.service" />
       <recent name="com.example.isuusclient" />
     </key>
   </component>
@@ -102,6 +126,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -111,10 +143,22 @@
       <option name="presentableId" value="Default" />
       <updated>1716281870145</updated>
       <workItem from="1716281871253" duration="5291000" />
+      <workItem from="1716310948097" duration="6124000" />
+      <workItem from="1716318937110" duration="13493000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

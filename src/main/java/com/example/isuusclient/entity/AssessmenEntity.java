@@ -21,11 +21,11 @@ public class AssessmenEntity {
     private int assessmen;
 
     private LessonsEntity lesson;
-    private List<StudentsEntity> students;
+
 
     @Override
     public String toString() {
         return
-                "" + assessmen + ' ' + lesson + ' ' + students + ' ';
+                "" + assessmen + ' ' + lesson ;
     }
 }

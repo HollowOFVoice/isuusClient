@@ -1,0 +1,49 @@
+.anchorPaCity{
+    -fx-font-family: "Comic Sans MS";
+    -fx-border-color: black;
+    -fx-border-radius:20;
+    -fx-background-radius:20;
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%,  #9BC5C3, #5C9390, #616161);
+}
+.buttons{
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #154035, #34423f);
+    -fx-border-radius:30;
+    -fx-border-color:linear-gradient(from 25% 25% to 100% 100%, #ffe9f1,#ffffff);
+
+    -fx-background-radius:30;
+}
+
+.krushok{
+    -fx-background-radius:30;
+}
+
+.fon{
+    -fx-background-image: url(fon.jpg);
+    -fx-border-color: black;
+}
+.table{
+
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #4f6e6c, #5C9390, #616161);
+    -fx-border-color: black;
+}
+.column{
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ffffff, rgba(159, 159, 159, 0.22));
+
+}
+.dialogFon{
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #237A57, #093028);
+}
+
+.buttonnnn{
+    -fx-background-color: #17322c;
+    -fx-border-color: #ffffff;
+    -fx-border-radius:20;
+    -fx-background-radius:20;
+}
+.dialogMenu{
+    -fx-border-radius:20;
+    -fx-background-radius:20;
+}

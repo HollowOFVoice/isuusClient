@@ -21,7 +21,7 @@ public class GroupService {
     ClientProperties prop = new ClientProperties();
     private Type dataType = new TypeToken<DataResponse<GroupsEntity>>() {
     }.getType();
-    private Type listType = new TypeToken<DataResponse<GroupsEntity>>() {
+    private Type listType = new TypeToken<ListResponse<GroupsEntity>>() {
     }.getType();
 
     public void getAll(){

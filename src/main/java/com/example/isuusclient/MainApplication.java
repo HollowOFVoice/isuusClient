@@ -1,6 +1,8 @@
 package com.example.isuusclient;
 
 import com.example.isuusclient.controller.MainController;
+import com.example.isuusclient.controller.StudentsAddController;
+import com.example.isuusclient.entity.StudentsEntity;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,6 +12,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class MainApplication extends Application {
     private FXMLLoader fxmlLoader;
@@ -63,6 +66,31 @@ public class MainApplication extends Application {
         }
     }
 
+
+    public static void showBookDialog(Optional<StudentsEntity> students) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApplication.class.getResource("add-student-view.fxml"));
+
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Работа со студентом");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            StudentsAddController controller = loader.getController();
+
+            controller.setStudents(students);
+            controller.start();
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            dialogStage.showAndWait();
+            students = controller.getStudents();
+            mainController.setStudent(students);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }

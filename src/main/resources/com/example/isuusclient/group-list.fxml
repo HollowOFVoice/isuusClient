@@ -16,8 +16,7 @@
                   <Button contentDisplay="RIGHT" mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="На главную" textAlignment="CENTER" textFill="WHITE" />
               </buttons>
             </ButtonBar>
-            <Button mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE" />
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
             <Button mnemonicParsing="false" onAction="#addGroup" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
          </buttons>
          <BorderPane.margin>

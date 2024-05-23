@@ -20,7 +20,7 @@ public class LessonService {
     ClientProperties prop = new ClientProperties();
     private Type dataType = new TypeToken<DataResponse<LessonsEntity>>() {
     }.getType();
-    private Type listType = new TypeToken<DataResponse<LessonsEntity>>() {
+    private Type listType = new TypeToken<ListResponse<LessonsEntity>>() {
     }.getType();
 
 

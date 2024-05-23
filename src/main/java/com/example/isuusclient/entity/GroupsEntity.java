@@ -23,9 +23,11 @@ public class GroupsEntity {
 
     private  String groups;
 
+    @Override
+    public String toString() {
+        return groups ;
+    }
 
 
-
-
-    //не забудь про джэйсон игнор
+//не забудь про джэйсон игнор
 }

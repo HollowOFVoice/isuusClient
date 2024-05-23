@@ -13,12 +13,11 @@
          <buttons>
             <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="200.0">
               <buttons>
-                  <Button contentDisplay="RIGHT" mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="На главную" textAlignment="CENTER" textFill="WHITE" />
+                  <Button fx:id="backButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#back" styleClass="buttons" stylesheets="@iscol.css" text="На главную" textAlignment="CENTER" textFill="WHITE" />
               </buttons>
             </ButtonBar>
-            <Button mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE" />
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#addSpecial" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
          </buttons>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />

@@ -31,7 +31,7 @@
 }
 .column{
     -fx-font-family: "Comic Sans MS";
-    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ffffff, rgba(159, 159, 159, 0.22));
+    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ffffff, rgb(159, 159, 159));*/
 
 }
 .dialogFon{

@@ -17,9 +17,8 @@
                   <Button contentDisplay="RIGHT" mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="На главную" textAlignment="CENTER" textFill="WHITE" />
               </buttons>
             </ButtonBar>
-            <Button mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE" />
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#addLesson" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
          </buttons>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />
@@ -30,10 +29,9 @@
       </ButtonBar>
    </bottom>
    <center>
-      <TableView prefHeight="348.0" prefWidth="866.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableLesson" prefHeight="348.0" prefWidth="866.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
          <columns>
-            <TableColumn prefWidth="113.0" text="Специальность" visible="false" />
-            <TableColumn prefWidth="490.0" styleClass="column" text="Изучаемые предметы" />
+            <TableColumn fx:id="columnLesson" prefWidth="490.0" styleClass="column" text="Изучаемые предметы" />
          </columns>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />

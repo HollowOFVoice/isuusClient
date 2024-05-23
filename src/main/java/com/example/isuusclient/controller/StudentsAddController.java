@@ -3,8 +3,7 @@ package com.example.isuusclient.controller;
 import com.example.isuusclient.entity.AssessmenEntity;
 import com.example.isuusclient.entity.GroupsEntity;
 import com.example.isuusclient.entity.StudentsEntity;
-import com.example.isuusclient.service.SpecialService;
-import com.example.isuusclient.service.StudentService;
+import com.example.isuusclient.service.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,8 +16,14 @@ import lombok.Setter;
 import java.util.Optional;
 
 public class StudentsAddController {
-    StudentService service = new StudentService();
+    private final ErrorAlertService alertService = new ErrorAlertService();
+
+    StudentService studentService = new StudentService();
     SpecialService specialService = new SpecialService();
+    AssessmenService assessmenService = new AssessmenService();
+    GroupService groupService = new GroupService();
+
+
 
     private boolean addFlag = true;
 
@@ -46,15 +51,14 @@ public class StudentsAddController {
     private Button saveStudent;
 
 
-//    @FXML
-//    private void initialize(){
-//        authorService.getAll();
-//        publisherService.getAll();
-//        genreService.getAll();
-//        ComboboxAuthor.setItems(authorService.getData());
-//        ComboboxGenre.setItems(genreService.getData());
-//        ComboboxPublisher.setItems(publisherService.getData());
-//    }
+    @FXML
+    private void initialize(){
+        studentService.getAll();
+        assessmenService.getAll();
+        groupService.getAll();
+        comboBoxAssessmen.setItems(assessmenService.getData());
+        comboBoxGroup.setItems(groupService.getData());
+    }
 
 
 
@@ -72,7 +76,6 @@ public class StudentsAddController {
                 .recordBook(Long.valueOf(textRecBook.getText()))
                 .assessmen(comboBoxAssessmen.getSelectionModel().getSelectedItem())
                 .group(comboBoxGroup.getSelectionModel().getSelectedItem())
-
                 .build();
         if (students.isEmpty()){
             students = Optional.of(temp);}
@@ -82,7 +85,7 @@ public class StudentsAddController {
         System.out.println(temp);
             students = Optional.of(temp);
     }catch (Exception e){
-      //  alertService.addVoid(e);
+        alertService.addVoid(e);
     }
         Stage stage = (Stage) saveStudent.getScene().getWindow();
         stage.close();
@@ -94,6 +97,17 @@ public class StudentsAddController {
        Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
 
+    }
+
+    public  void  start(){
+        if (students.isPresent()){
+            textName.setText(students.get().getName());
+            textFamil.setText(students.get().getSurname());
+            textOtchestvo.setText(students.get().getLastname());
+            comboBoxGroup.setValue(students.get().getGroup());
+            comboBoxAssessmen.setValue(students.get().getAssessmen());
+            textRecBook.setText(String.valueOf(students.get().getRecordBook()));
+        }
     }
 
 

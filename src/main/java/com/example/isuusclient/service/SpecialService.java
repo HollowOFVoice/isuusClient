@@ -21,7 +21,7 @@ public class SpecialService {
     ClientProperties prop = new ClientProperties();
     private Type dataType = new TypeToken<DataResponse<SpecialsEntity>>() {
     }.getType();
-    private Type listType = new TypeToken<DataResponse<SpecialsEntity>>() {
+    private Type listType = new TypeToken<ListResponse<SpecialsEntity>>() {
     }.getType();
 
 

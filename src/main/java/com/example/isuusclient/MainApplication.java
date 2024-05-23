@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -44,6 +45,24 @@ public class MainApplication extends Application {
             e.printStackTrace();
         }
     }
+
+
+    public static void showDialog2(String nameView, String title) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApplication.class.getResource(nameView));
+            BorderPane page = (BorderPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle(title);
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            dialogStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 }

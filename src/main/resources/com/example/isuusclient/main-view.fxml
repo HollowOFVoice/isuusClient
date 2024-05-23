@@ -30,15 +30,15 @@
                </cursor>
             </Button>
             <TextField prefHeight="25.0" prefWidth="160.0" />
-            <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Список предметов" textFill="WHITE">
+            <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onAction="#assessmenList" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Список предметов" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Список специальностей" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+            <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onAction="#SpecialList" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Список специальностей" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-          <Button minWidth="70.0" mnemonicParsing="false" prefHeight="25.0" styleClass="buttons" stylesheets="@iscol.css" text="Список групп" textFill="WHITE">
+          <Button minWidth="70.0" mnemonicParsing="false" onAction="#GroupList" prefHeight="25.0" styleClass="buttons" stylesheets="@iscol.css" text="Список групп" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -54,7 +54,7 @@
    <bottom>
       <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="BOTTOM_LEFT">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#addOrChangeAssessmen" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#addStudent" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
             <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE" />
             <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
          </buttons>

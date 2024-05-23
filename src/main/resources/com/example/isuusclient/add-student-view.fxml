@@ -7,25 +7,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="339.0" prefWidth="322.0" styleClass="dialogFon" stylesheets="@iscol.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isuusclient.controller.LessonAddController">
+<AnchorPane prefHeight="339.0" prefWidth="322.0" styleClass="dialogFon" stylesheets="@iscol.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isuusclient.controller.StudentsAddController">
    <children>
-      <TextField layoutX="73.0" layoutY="33.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
+      <TextField fx:id="textFamil" layoutX="73.0" layoutY="33.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
       <Text fill="WHITE" layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" />
       <ButtonBar layoutX="40.0" layoutY="289.0" prefHeight="40.0" prefWidth="200.0">
          <buttons>
-            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="94.0" styleClass="buttonnnn" stylesheets="@iscol.css" text="Сохранить" textFill="WHITE" />
-            <Button mnemonicParsing="false" styleClass="buttonnnn" stylesheets="@iscol.css" text="Отмена" textFill="WHITE" />
+            <Button fx:id="saveStudent" mnemonicParsing="false" onAction="#addStudent" prefHeight="28.0" prefWidth="94.0" styleClass="buttonnnn" stylesheets="@iscol.css" text="Сохранить" textFill="WHITE" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" styleClass="buttonnnn" stylesheets="@iscol.css" text="Отмена" textFill="WHITE" />
          </buttons>
       </ButtonBar>
-      <ComboBox layoutX="74.0" layoutY="167.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
+      <ComboBox fx:id="comboBoxGroup" layoutX="74.0" layoutY="167.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
       <Text fill="WHITE" layoutX="15.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Группа" />
-      <ComboBox layoutX="74.0" layoutY="212.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
+      <ComboBox fx:id="comboBoxAssessmen" layoutX="74.0" layoutY="212.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
       <Text fill="WHITE" layoutX="14.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Оценка" />
-      <TextField layoutX="74.0" layoutY="71.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
+      <TextField fx:id="textName" layoutX="74.0" layoutY="71.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
       <Text fill="WHITE" layoutX="15.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" />
-      <TextField layoutX="74.0" layoutY="117.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
+      <TextField fx:id="textOtchestvo" layoutX="74.0" layoutY="117.0" prefHeight="26.0" prefWidth="237.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
       <Text fill="WHITE" layoutX="15.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" />
-      <TextField layoutX="140.0" layoutY="254.0" prefHeight="25.0" prefWidth="172.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
+      <TextField fx:id="textRecBook" layoutX="140.0" layoutY="254.0" prefHeight="25.0" prefWidth="172.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
       <Text fill="WHITE" layoutX="14.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="№ Зачетной книжки" />
    </children>
 </AnchorPane>

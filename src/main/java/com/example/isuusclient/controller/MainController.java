@@ -31,7 +31,7 @@ public class MainController {
     private TableColumn<StudentsEntity,String> nameTable;
 
     @FXML
-    private TableColumn<StudentsEntity, Integer> recbookTable;
+    private TableColumn<StudentsEntity, String> recbookTable;
 
     @FXML
     private TableColumn<StudentsEntity, String> specialTable;
@@ -52,6 +52,27 @@ public class MainController {
 void addOrChangeAssessmen(ActionEvent event){
     MainApplication.showDialog("ad-assessmen-view.fxml", "Добавить/изменить Оценку");
 }
+
+@FXML
+    void addStudent(ActionEvent event){
+    MainApplication.showDialog("add-student-view.fxml","Добавить студента");
+}
+
+    @FXML
+    void GroupList(ActionEvent event){
+        MainApplication.showDialog2("group-list.fxml", "Список Групп");
+    }
+
+    @FXML
+    void assessmenList(ActionEvent event){
+        MainApplication.showDialog2("assessmen-list.fxml", "Список оценок");
+    }
+
+    @FXML
+    void SpecialList(ActionEvent event){
+        MainApplication.showDialog2("special-list.fxml", "Список специальностей");
+    }
+
     @FXML
     private void initialize(){
         //получаем список с сервера
@@ -62,7 +83,7 @@ void addOrChangeAssessmen(ActionEvent event){
         lastNameTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("lastname"));
         groupColumn.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("group"));
         specialTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("special"));
-        recbookTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, Integer>("recbook"));
+        recbookTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("recbook"));
        studentTable.setItems(service.getData());
     }
 

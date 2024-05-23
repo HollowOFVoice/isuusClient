@@ -26,6 +26,6 @@ public class AssessmenEntity {
     @Override
     public String toString() {
         return
-                "" + assessmen + ' ' + lesson ;
+                " " + assessmen + " " + lesson ;
     }
 }

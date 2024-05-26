@@ -4,38 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d74ef24c-34ea-4b49-a10a-5b5d10a0c148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/UserAddController.java" afterDir="false" />
+    <list default="true" id="d74ef24c-34ea-4b49-a10a-5b5d10a0c148" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenAddController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonAddController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialAddController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/AssessmenEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/AssessmenEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/StudentsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/StudentsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/UsersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/UserAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/UserAddController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ErrorAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ErrorAlertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/HttpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/HttpService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SignInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SignInService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SpecialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SpecialService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/ad-assessmen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/ad-assessmen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-lesson-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-lesson-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-user-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/add-user-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/assessmen-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/assessmen-list.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/lesson-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/lesson-list.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/special-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/special-list.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/user-enter-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/user-enter-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Last-modif" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,6 +57,13 @@
     &quot;accountId&quot;: &quot;9f632977-5066-4f12-92dc-446b705c06f8&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -86,9 +80,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Last-modif",
+    "git-widget-placeholder": "final-commit",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/JavaFlexCode/isuus2024",
+    "last_opened_file_path": "C:/JavaFlexCode/isuusClient",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -161,12 +155,26 @@
       <workItem from="1716642783477" duration="413000" />
       <workItem from="1716644684536" duration="1146000" />
       <workItem from="1716657643358" duration="14312000" />
-      <workItem from="1716709783170" duration="13712000" />
+      <workItem from="1716709783170" duration="13812000" />
+      <workItem from="1716729680891" duration="11944000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1716729551891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716729551891</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

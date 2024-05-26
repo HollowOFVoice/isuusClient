@@ -31,9 +31,12 @@ public class LessonListController {
 
     @FXML
     void addLesson(ActionEvent event) {
-        MainApplication.showDialog("add-lesson-view.fxml","Добавить добавить/изменить предмет");
+        try {
+            MainApplication.showDialog("add-lesson-view.fxml", "Добавить добавить/изменить предмет");
+        } catch (Exception e){
+            alertService.didntStart(e);
+        }
     }
-
     @FXML
     void back(ActionEvent event) {
         Stage stage = (Stage) backButton.getScene().getWindow();

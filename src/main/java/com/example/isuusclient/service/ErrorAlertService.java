@@ -88,7 +88,7 @@ public class ErrorAlertService extends Application {
 
 
     public void didntStart(Exception e) {
-        String whatMistakeStr = "Проверьте, возможноо провайдер отрезал кабель, или кто-то не тыкнул на кнопку запуска сервера!";
+        String whatMistakeStr = "Проверьте, возможноо провайдер отрезал кабель, или кто-то не тыкнул на кнопку запуска сервера! Также возможно вы указали не верные данные";
         showError(e, whatMistakeStr);
     }
     public void dinStart() {
@@ -96,7 +96,7 @@ public class ErrorAlertService extends Application {
         showAlertWithHeaderText(whatMistakeStr);
     }
 
-    public void dinfound(Exception e) {
+    public void dinfound() {
         String whatMistakeStr = "Студента с таким номером зачетной книжки не существует! Попробуйте проверить, верность введенных данных";
         showAlertWithHeaderText222(whatMistakeStr);
     }

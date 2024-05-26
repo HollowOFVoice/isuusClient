@@ -62,16 +62,19 @@ public class MainController {
             service.findByRec(studentsEntity);
             MainApplication.showDialog("main-view.fxml", "Главная");
         }catch (Exception e){
-            alertService.dinfound(e);
+           alertService.didntStart(e);
         }
     }
 
+    @FXML
+    void delete(ActionEvent event) {
+        try {
+            service.delete(getSelectionElement());
+        } catch (Exception e) {
+            alertService.deleteVoid(e);
 
-
-@FXML
-void addOrChangeAssessmen(ActionEvent event){
-    MainApplication.showDialog("ad-assessmen-view.fxml", "Добавить/изменить Оценку");
-}
+        }
+    }
 
 
     private Optional<StudentsEntity> students = Optional.empty();
@@ -86,13 +89,14 @@ void addOrChangeAssessmen(ActionEvent event){
         }catch (Exception e){
             alertService.addVoid(e);
         }
-
     }
 
 @FXML
     void addStudent(ActionEvent event){
-    Optional<StudentsEntity> students = Optional.empty();
-    MainApplication.showBookDialog(students);
+        try {
+            Optional<StudentsEntity> students = Optional.empty();
+            MainApplication.showBookDialog(students);
+        }catch (Exception e){alertService.didntStart(e);}
 }
     private StudentsEntity getSelectionElement(){
         StudentsEntity temp = studentTable.getSelectionModel().getSelectedItem();
@@ -101,23 +105,30 @@ void addOrChangeAssessmen(ActionEvent event){
 
     @FXML
     void changeStudent(ActionEvent event){
+        try{
         Optional<StudentsEntity> students = Optional.of(getSelectionElement());
-        MainApplication.showBookDialog(students);
+        MainApplication.showBookDialog(students);}catch (Exception e){alertService.didntStart(e);}
     }
 
     @FXML
     void GroupList(ActionEvent event){
-        MainApplication.showDialog2("group-list.fxml", "Список Групп");
+        try {
+            MainApplication.showDialog2("group-list.fxml", "Список Групп");
+        }catch (Exception e){alertService.didntStart(e);}
     }
 
     @FXML
     void lessonList(ActionEvent event){
-        MainApplication.showDialog2("lesson-list.fxml", "Список изучаемых предметов");
+        try {
+            MainApplication.showDialog2("lesson-list.fxml", "Список изучаемых предметов");
+        } catch (Exception e){alertService.didntStart(e);}
     }
 
     @FXML
     void SpecialList(ActionEvent event){
-        MainApplication.showDialog2("special-list.fxml", "Список специальностей");
+        try {
+            MainApplication.showDialog2("special-list.fxml", "Список специальностей");
+        }catch (Exception e){alertService.didntStart(e);}
     }
 
     @FXML

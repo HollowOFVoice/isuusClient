@@ -91,7 +91,7 @@ public class StudentService {
             alertService.showRes(respose.getData(),"Найдено совпадение по вашим данным!");
 
         }else{
-            throw new RuntimeException(respose.getMessage());
+           alertService.dinfound();
         }
     }
     }

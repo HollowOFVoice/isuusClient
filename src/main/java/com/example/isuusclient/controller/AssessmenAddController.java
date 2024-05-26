@@ -42,7 +42,7 @@ public class AssessmenAddController {
     }
     @FXML
     void addAssessmen(ActionEvent event) {
-        //try {
+        try {
             AssessmenEntity assessmen = new AssessmenEntity();
             assessmen.setAssessmen(textAssessmen.getText());
             assessmen.setLesson(comBoxLesson.getSelectionModel().getSelectedItem());
@@ -53,9 +53,9 @@ public class AssessmenAddController {
                 service.update(assessmen, getSelectionElement());
             }
             textAssessmen.clear();
-      //  }catch (Exception e){
-          //  alertService.addVoid(e);
-    //    }
+        }catch (Exception e){
+            alertService.addVoid(e);
+        }
         Stage stage = (Stage) saveAssess.getScene().getWindow();
         stage.close();
         saveAssess.setText("добавить");
@@ -88,11 +88,7 @@ public class AssessmenAddController {
         saveAssess.setText("Добавить");
 
     }
-//    @FXML
-//    void delete(ActionEvent event) {
-//        service.delete(getSelectionElement());
-//        textAssessmen.clear();
-//    }
+
 
 
 }

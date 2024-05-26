@@ -37,8 +37,10 @@ public class GroupListController {
     }
     @FXML
     void assessmenList(ActionEvent event){
-        MainApplication.showDialog2("assessmen-list.fxml", "Список специальностей");
-    }
+        try {
+            MainApplication.showDialog2("assessmen-list.fxml", "Список специальностей");
+        }catch (Exception e){alertService.didntStart(e);}
+        }
     @FXML
     private void initialize(){
         service.getAll();

@@ -8,7 +8,7 @@ public class HttpService {
 
     private static OkHttpClient client = new OkHttpClient();
     private final MediaType JSON = MediaType.get("application/json; charset=utf-8");
-
+    ErrorAlertService alertService = new ErrorAlertService();
     public String get(String url) {
         String result = "";
         Request request = new Request
@@ -19,6 +19,7 @@ public class HttpService {
             if (!response.isSuccessful()) {
                 throw new IOException("Зaпpoc к cepвepy не был успешен: " +
                         response.code() + " " + response.message());
+
             }
 
             result = response.body().string();

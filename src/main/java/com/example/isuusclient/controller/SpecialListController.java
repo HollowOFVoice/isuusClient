@@ -72,8 +72,9 @@ public class SpecialListController {
 
     @FXML
     void addSpecial(ActionEvent event) {
-        MainApplication.showDialog("add-special-view.fxml","Добавить специальность");
-
+        try {
+            MainApplication.showDialog("add-special-view.fxml", "Добавить специальность");
+        }catch (Exception e){alertService.didntStart(e);}
     }
 
 

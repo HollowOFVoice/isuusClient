@@ -62,8 +62,10 @@ public class AssessmenListController {
 
     @FXML
     void addAssessmen(ActionEvent event) {
-        MainApplication.showDialog("ad-assessmen-view.fxml","Добавить добавить/изменить оценку");
-    }
+        try {
+            MainApplication.showDialog("ad-assessmen-view.fxml", "Добавить добавить/изменить оценку");
+        }catch (Exception e){alertService.didntStart(e);}
+        }
 
     @FXML
     private void initialize(){

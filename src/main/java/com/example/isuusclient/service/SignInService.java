@@ -4,6 +4,7 @@ import com.example.isuusclient.MainApplication;
 import com.example.isuusclient.Response.DataResponse;
 import com.example.isuusclient.Response.ListResponse;
 import com.example.isuusclient.controller.MainController;
+import com.example.isuusclient.controller.SignInController;
 import com.example.isuusclient.entity.StudentsEntity;
 import com.example.isuusclient.entity.UsersEntity;
 import com.google.gson.reflect.TypeToken;
@@ -52,16 +53,28 @@ public class SignInService {
 
 
 
+    public void add(UsersEntity data){
+        String temp = http.post(prop.getSaveUser(), service.getJson(data));
+        DataResponse<UsersEntity> respose = service.getObject(temp, dataType);
+        if (respose.isSuccess()){
+            this.data.add(respose.getData());
+
+        }else{
+
+            throw new RuntimeException(respose.getMessage());
+        }
+    }
 
 
-    public void checkUserData(UsersEntity data) {
+
+    public void checkUserData(UsersEntity data) throws IOException {
         //String url = "http://localhost:2825/api/v1/user?username=" + username + "&password=" + password;
         String temp = http.get(prop.getCheckUser() + data.getUsername()+"&password="+data.getPassword());
         DataResponse<UsersEntity> respose = service.getObject(temp, dataType);
         if (respose.isSuccess()){
             //alertService.showResUserCheck(respose.getData(),"Найдено совпадение по вашим данным!");
-            MainApplication.showDialog2("main-view.fxml","Главная");
-
+            MainApplication.start2("Главная");
+            
         }else{
 
             alertService.dinfoundUser();

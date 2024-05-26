@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="169.0" prefWidth="334.0" styleClass="dialogFon" stylesheets="@iscol.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isuusclient.controller.LessonAddController">
+<AnchorPane prefHeight="169.0" prefWidth="334.0" styleClass="dialogFon" stylesheets="@iscol.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isuusclient.controller.UserAddController">
    <children>
       <TextField fx:id="userNameField" layoutX="143.0" layoutY="35.0" prefHeight="25.0" prefWidth="172.0" styleClass="dialogMenu" stylesheets="@iscol.css" />
       <Text fill="WHITE" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя пользователя" />
       <ButtonBar layoutX="43.0" layoutY="120.0" prefHeight="40.0" prefWidth="200.0">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#addUser" prefHeight="28.0" prefWidth="94.0" styleClass="buttonnnn" stylesheets="@iscol.css" text="Сохранить" textFill="WHITE" />
+            <Button fx:id="saveUser" mnemonicParsing="false" onAction="#addUser" prefHeight="28.0" prefWidth="94.0" styleClass="buttonnnn" stylesheets="@iscol.css" text="Сохранить" textFill="WHITE" />
             <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" styleClass="buttonnnn" stylesheets="@iscol.css" text="Отмена" textFill="WHITE" />
          </buttons>
       </ButtonBar>

@@ -20,19 +20,37 @@ public class MainApplication extends Application {
     private static MainController mainController;
     private static SignInController signInController;
 
+
+
+
     @Override
     public void start(Stage stage) throws IOException {
         fxmlLoader = new FXMLLoader(MainApplication.class.getResource("user-enter-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1000, 400);
-        stage.setTitle("Главная");
+        Scene scene = new Scene(fxmlLoader.load(), 320, 350);
+        stage.setTitle("Вход в систему");
         stage.setScene(scene);
         signInController = fxmlLoader.getController();
         stage.show();
+
     }
 
     public static void main(String[] args) {
         launch();
     }
+
+
+    public static void start2(String title) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle(title);
+        stage.initModality(Modality.WINDOW_MODAL);
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 600);
+
+        stage.setScene(scene);
+        mainController = fxmlLoader.getController();
+        stage.show();
+    }
+
 
 
     public static void showDialog(String nameView, String title) {

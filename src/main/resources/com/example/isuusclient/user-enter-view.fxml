@@ -14,7 +14,7 @@
       <Text fill="WHITE" layoutX="40.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин" />
       <ButtonBar layoutX="40.0" layoutY="245.0" prefHeight="40.0" prefWidth="226.0">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#enter" prefHeight="28.0" prefWidth="94.0" styleClass="buttonnnn" stylesheets="@iscol.css" text="Вход" textFill="WHITE" />
+            <Button fx:id="enterButton" mnemonicParsing="false" onAction="#enter" prefHeight="28.0" prefWidth="94.0" styleClass="buttonnnn" stylesheets="@iscol.css" text="Вход" textFill="WHITE" />
             <Button mnemonicParsing="false" onAction="#registr" prefHeight="28.0" prefWidth="94.0" styleClass="buttonnnn" stylesheets="@iscol.css" text="Регистрация" textFill="WHITE" />
          </buttons>
       </ButtonBar>

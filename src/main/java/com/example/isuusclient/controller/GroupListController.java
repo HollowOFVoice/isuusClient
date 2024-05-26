@@ -7,10 +7,12 @@ import com.example.isuusclient.service.ErrorAlertService;
 import com.example.isuusclient.service.GroupService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,13 +28,17 @@ public class GroupListController {
 
     @FXML
     private TableView<GroupsEntity> groupTable;
-
+    @FXML
+    private Button backButton;
 
     @FXML
     private void addGroup(){
         MainApplication.showDialog("add-group-view.fxml","Добавить группу");
     }
-
+    @FXML
+    void assessmenList(ActionEvent event){
+        MainApplication.showDialog2("assessmen-list.fxml", "Список специальностей");
+    }
     @FXML
     private void initialize(){
         service.getAll();
@@ -40,7 +46,11 @@ public class GroupListController {
         groupTable.setItems(service.getData());
 
     }
-
+    @FXML
+    void back(ActionEvent event) {
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
+    }
     @FXML
     void delete(ActionEvent event) {
         try {

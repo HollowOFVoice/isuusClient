@@ -32,11 +32,11 @@ private  Long recordBook;
     @Override
     public String toString() {
         return
-                assessmen +
-                " " + group +
-                " " + name  +
-                " " + surname +
-                " " + lastname  +
-                " " + recordBook ;
+                               surname +
+                        " " + name  +
+                        " " + lastname  +
+                          ", " + group +
+                                       ", "+ assessmen +
+                        ", " + recordBook ;
     }
 }

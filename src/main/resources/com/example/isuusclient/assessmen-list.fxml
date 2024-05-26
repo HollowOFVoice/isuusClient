@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.TableColumn?>
@@ -13,12 +14,20 @@
          <buttons>
             <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="200.0">
               <buttons>
-                  <Button contentDisplay="RIGHT" mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="На главную" textAlignment="CENTER" textFill="WHITE" />
+                  <Button fx:id="backButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#back" styleClass="buttons" stylesheets="@iscol.css" text="На главную" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
               </buttons>
             </ButtonBar>
-            <Button mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE" />
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
-            <Button mnemonicParsing="false" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#addAssessmen" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </buttons>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />
@@ -29,12 +38,11 @@
       </ButtonBar>
    </bottom>
    <center>
-      <TableView prefHeight="348.0" prefWidth="866.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
+      <TableView fx:id="assessmenTable" prefHeight="348.0" prefWidth="866.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
          <columns>
-            <TableColumn prefWidth="129.0" styleClass="column" text="Специальность" />
             <TableColumn prefWidth="113.0" text="Специальность" visible="false" />
-            <TableColumn prefWidth="172.0" styleClass="column" text="Изучаемый предмет" />
-            <TableColumn prefWidth="189.0" styleClass="column" text="Оценка" />
+            <TableColumn fx:id="lessonTable" prefWidth="240.7999815940857" styleClass="column" text="Изучаемый предмет" />
+            <TableColumn fx:id="assessColumn" prefWidth="250.4000244140625" styleClass="column" text="Оценка" />
          </columns>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />

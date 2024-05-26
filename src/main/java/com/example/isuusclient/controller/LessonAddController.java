@@ -1,5 +1,6 @@
 package com.example.isuusclient.controller;
 
+import com.example.isuusclient.entity.AssessmenEntity;
 import com.example.isuusclient.entity.GroupsEntity;
 import com.example.isuusclient.entity.LessonsEntity;
 import com.example.isuusclient.entity.SpecialsEntity;
@@ -13,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class LessonAddController {
@@ -66,8 +69,26 @@ public class LessonAddController {
         LessonsEntity temp = dataList.getSelectionModel().getSelectedItem();
         return temp;
     }
+
+
+    @FXML
+    void onMouseClickDataList(MouseEvent event) {
+        if (event.getButton().equals(MouseButton.PRIMARY)){
+            if (event.getClickCount() == 2){
+                addFlag = false;
+                LessonsEntity temp = getSelectionElement();
+                textLesson.setText(temp.getLesson());
+                saveLesson.setText("Изменить");
+            }
+        }
+    }
+
+
+
     @FXML
     void cancel(ActionEvent event) {
-
+        dataList.editableProperty().setValue(false);
+        textLesson.clear();
+        saveLesson.setText("Добавить");
     }
 }

@@ -18,7 +18,7 @@ public class AssessmenEntity {
 
 
     private  Long id;
-    private int assessmen;
+    private String assessmen;
 
     private LessonsEntity lesson;
 

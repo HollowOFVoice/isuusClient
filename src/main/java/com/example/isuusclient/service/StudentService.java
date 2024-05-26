@@ -19,6 +19,7 @@ import java.lang.reflect.Type;
 public class StudentService {
     @Getter
     private ObservableList<StudentsEntity> data = FXCollections.observableArrayList();
+     ErrorAlertService alertService = new ErrorAlertService();
     private  final HttpService http = new HttpService();
     JsonService service = new JsonService();
     ClientProperties prop = new ClientProperties();
@@ -50,6 +51,7 @@ public class StudentService {
             this.data.add(respose.getData());
 
         }else{
+
             throw new RuntimeException(respose.getMessage());
         }
     }
@@ -77,17 +79,31 @@ public class StudentService {
         }
     }
 
+
+
+
+
+
     public void findByRec(StudentsEntity data){
-        String temp = http.get(prop.getFineByRec() + data.getId());
+        String temp = http.get(prop.getFineByRec() + data.getRecordBook());
         DataResponse<StudentsEntity> respose = service.getObject(temp, dataType);
         if (respose.isSuccess()){
-            this.data.add(respose.getData());
+            alertService.showRes(respose.getData(),"Найдено совпадение по вашим данным!");
 
         }else{
             throw new RuntimeException(respose.getMessage());
         }
     }
-
-
     }
+
+//        public void findByRec(StudentsEntity data){
+//           ListResponse<StudentsEntity> data = service.getObject(http.get(prop.getFineByRec()),listType );
+//        if (data.isSuccess()){
+//            this.data.addAll(data.getData());
+//this.data.forEach(System.out::println);
+//        }else{
+//            throw new RuntimeException(data.getMessage());
+//        }
+//    }
+
 

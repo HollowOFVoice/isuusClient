@@ -41,7 +41,7 @@ public class SpecialService {
         String temp = http.post(prop.getSaveSpecial(), service.getJson(data));
         DataResponse<SpecialsEntity> respose = service.getObject(temp, dataType);
         if (respose.isSuccess()){
-            this.data.add(respose.getData());
+        this.data.add(respose.getData());
 
         }else{
             throw new RuntimeException(respose.getMessage());

@@ -16,13 +16,13 @@ import lombok.Setter;
 public class UsersEntity {
 
     private Long id;
-    private String usernanme;
-    private int password;
+    private String username;
+    private String password;
 
     @Override
     public String toString() {
         return
-                " " + usernanme  +
+                " " + username  +
                 " " + password ;
     }
 }

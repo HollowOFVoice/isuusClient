@@ -15,6 +15,9 @@ public class ClientProperties {
 
     private String allStudent;
     private String fineByRec;
+
+    //private String fineByRecoridng;
+
     private String saveStudent;
     private String updateStudent;
 
@@ -41,19 +44,20 @@ public class ClientProperties {
     private String deleteSpecial;
 
     private String saveUser;
+    private String checkUser;
 
     public ClientProperties() {
         try (InputStream input = MainApplication.class.getClassLoader().getResourceAsStream("config.properties")) {
             System.out.println(input);
             properties.load(input);//загрузка свойства из файла
             allStudent = properties.getProperty("student.getAll");
-            fineByRec = properties.getProperty("student.byRec");
+            fineByRec = properties.getProperty("student.byRecBook");
             saveStudent = properties.getProperty("student.save");
             updateStudent = properties.getProperty("student.update");
 
-            allAssessmen = properties.getProperty("assessmen.getAll");
-            saveAssessmen = properties.getProperty("assessmen.save");
-            updateAssessmen = properties.getProperty("assessmen.update");
+            allAssessmen = properties.getProperty("assessmens.getAll");
+            saveAssessmen = properties.getProperty("assessmens.save");
+            updateAssessmen = properties.getProperty("assessmens.update");
             allGroup = properties.getProperty("group.getAll");
             saveGroup= properties.getProperty("group.save");
             updateGroup = properties.getProperty("group.update");
@@ -68,6 +72,10 @@ public class ClientProperties {
     saveLessons = properties.getProperty("lesson.save");
     updateLessons = properties.getProperty("lesson.update");
     deleteLesson = properties.getProperty("lesson.del");
+
+          //  fineByRecoridng = properties.getProperty("student.byRec");
+
+checkUser = properties.getProperty("user.check");
 saveUser = properties.getProperty("user.save");
         } catch (IOException e) {
             e.printStackTrace();//обробатываеь исключение в слуучае ошибки

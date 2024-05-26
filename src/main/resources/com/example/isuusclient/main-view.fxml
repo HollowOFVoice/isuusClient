@@ -14,34 +14,43 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="907.0" styleClass="fon" stylesheets="@iscol.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isuusclient.controller.MainController">
    <top>
-      <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
+      <ButtonBar focusTraversable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="TOP_CENTER">
         <buttons>
             <ImageView fitHeight="35.0" fitWidth="30.0">
                <image>
                   <Image url="@lupa.png" />
                </image>
             </ImageView>
-            <Button graphicTextGap="3.0" minWidth="60.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="177.0" styleClass="buttons" stylesheets="@iscol.css" text="Поиск" textFill="WHITE">
+            <Button graphicTextGap="3.0" minWidth="60.0" mnemonicParsing="false" onAction="#searchByRecBook" prefHeight="24.0" prefWidth="177.0" styleClass="buttons" stylesheets="@iscol.css" text="Поиск" textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <cursor>
-                  <Cursor fx:constant="NONE" />
+                  <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField prefHeight="25.0" prefWidth="160.0" />
+            <TextField fx:id="searchField" alignment="CENTER" prefHeight="25.0" prefWidth="160.0" />
             <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onAction="#lessonList" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Список предметов" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Button>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onAction="#SpecialList" prefHeight="28.0" styleClass="buttons" stylesheets="@iscol.css" text="Список специальностей" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Button>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
           <Button minWidth="70.0" mnemonicParsing="false" onAction="#GroupList" prefHeight="25.0" styleClass="buttons" stylesheets="@iscol.css" text="Список групп" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Button>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
         </buttons>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -54,9 +63,18 @@
    <bottom>
       <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="BOTTOM_LEFT">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#addStudent" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE" />
-            <Button mnemonicParsing="false" onAction="#changeStudent" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE" />
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#addStudent" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" onAction="#changeStudent" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </buttons>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" />
@@ -66,8 +84,8 @@
          </padding>
       </ButtonBar>
    </bottom>
-   <left>
-      <TableView fx:id="studentTable" prefHeight="300.0" prefWidth="725.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
+   <center>
+      <TableView fx:id="studentTable" prefHeight="299.0" prefWidth="675.0" styleClass="table" stylesheets="@iscol.css" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="surnameTable" prefWidth="75.0" styleClass="column" text="Фамилия" />
           <TableColumn fx:id="nameTable" prefWidth="75.0" styleClass="column" text="Имя" />
@@ -80,5 +98,5 @@
             <Insets bottom="5.0" left="5.0" right="5.0" />
          </BorderPane.margin>
       </TableView>
-   </left>
+   </center>
 </BorderPane>

@@ -1,7 +1,10 @@
 package com.example.isuusclient.controller;
 
 import com.example.isuusclient.entity.AssessmenEntity;
+import com.example.isuusclient.entity.LessonsEntity;
 import com.example.isuusclient.service.AssessmenService;
+import com.example.isuusclient.service.ErrorAlertService;
+import com.example.isuusclient.service.LessonService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,10 +16,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class AssessmenAddController {
+   ErrorAlertService alertService = new ErrorAlertService();
     AssessmenService service = new AssessmenService();
+    LessonService lessonService = new LessonService();
     private boolean addFlag = true;
     @FXML
-    private ComboBox<AssessmenEntity> comBoxLesson;
+    private ComboBox<LessonsEntity> comBoxLesson;
 
     @FXML
     private ListView<AssessmenEntity> dataList;
@@ -30,15 +35,17 @@ public class AssessmenAddController {
     @FXML
     private void initialize(){
         service.getAll();
+        lessonService.getAll();
+        comBoxLesson.setItems(lessonService.getData());
         dataList.setItems(service.getData());
 
     }
     @FXML
     void addAssessmen(ActionEvent event) {
-        try {
-
+        //try {
             AssessmenEntity assessmen = new AssessmenEntity();
-            assessmen.setAssessmen(Integer.parseInt(textAssessmen.getText()));
+            assessmen.setAssessmen(textAssessmen.getText());
+            assessmen.setLesson(comBoxLesson.getSelectionModel().getSelectedItem());
             if (addFlag) {
                 service.add(assessmen);
             } else {
@@ -46,12 +53,12 @@ public class AssessmenAddController {
                 service.update(assessmen, getSelectionElement());
             }
             textAssessmen.clear();
-            Stage stage = (Stage) saveAssess.getScene().getWindow();
-            stage.close();
-            saveAssess.setText("Добавить");
-        } catch (Exception e) {
-//            alertService.addVoid(e);
-        }
+      //  }catch (Exception e){
+          //  alertService.addVoid(e);
+    //    }
+        Stage stage = (Stage) saveAssess.getScene().getWindow();
+        stage.close();
+        saveAssess.setText("добавить");
     }
 
 

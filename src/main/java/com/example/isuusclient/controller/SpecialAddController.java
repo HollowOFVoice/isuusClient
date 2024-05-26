@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 
 public class SpecialAddController {
 
+
     private final ErrorAlertService alertService = new ErrorAlertService();
 SpecialService service = new SpecialService();
     private boolean addFlag = true;
@@ -38,6 +39,9 @@ SpecialService service = new SpecialService();
         dataList.setItems(service.getData());
 
     }
+
+
+
     // не работает добавление
     @FXML
     void addSpecial(ActionEvent event) {
@@ -51,11 +55,13 @@ SpecialService service = new SpecialService();
                 service.update(specials, getSelectionElement());
             }
             specialText.clear();
+
         } catch (Exception e) {
             alertService.addVoid(e);
         }
         Stage stage = (Stage) saveSpecialButton.getScene().getWindow();
         stage.close();
+
         saveSpecialButton.setText("Добавить");
     }
 

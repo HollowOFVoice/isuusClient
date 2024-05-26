@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +23,11 @@ import java.util.Optional;
 @Setter
 public class MainController {
 
+    @FXML
+    private TableColumn<StudentsEntity, String> historyColumn;
 
+    @FXML
+    private TableView<StudentsEntity> historyTable;
 
     @FXML
     private TableColumn<StudentsEntity, String> groupColumn;
@@ -43,15 +48,26 @@ public class MainController {
     private TableView<StudentsEntity> studentTable;
 
     @FXML
+    private TextField searchField;
+    @FXML
     private TableColumn<StudentsEntity, String> surnameTable;
    StudentService service = new StudentService();
     private final ErrorAlertService alertService = new ErrorAlertService();
 
-//    @FXML
-//    void deleteBookAction(ActionEvent event) {
-//        HttpService service = new HttpService();
-//        System.out.println(service.get("http://localhost:2825/api/v1/student/all"));
-//    }
+    @FXML
+        void searchByRecBook(ActionEvent event) {
+        try {
+            StudentsEntity studentsEntity = new StudentsEntity();
+            studentsEntity.setRecordBook(Long.valueOf(searchField.getText()));
+            service.findByRec(studentsEntity);
+            MainApplication.showDialog("main-view.fxml", "Главная");
+        }catch (Exception e){
+            alertService.dinfound(e);
+        }
+    }
+
+
+
 @FXML
 void addOrChangeAssessmen(ActionEvent event){
     MainApplication.showDialog("ad-assessmen-view.fxml", "Добавить/изменить Оценку");
@@ -117,5 +133,8 @@ void addOrChangeAssessmen(ActionEvent event){
         recbookTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("recordBook"));
        studentTable.setItems(service.getData());
     }
+
+
+
 
 }

@@ -1,6 +1,7 @@
 package com.example.isuusclient;
 
 import com.example.isuusclient.controller.MainController;
+import com.example.isuusclient.controller.SignInController;
 import com.example.isuusclient.controller.StudentsAddController;
 import com.example.isuusclient.entity.StudentsEntity;
 import javafx.application.Application;
@@ -17,14 +18,15 @@ import java.util.Optional;
 public class MainApplication extends Application {
     private FXMLLoader fxmlLoader;
     private static MainController mainController;
+    private static SignInController signInController;
 
     @Override
     public void start(Stage stage) throws IOException {
-        fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
+        fxmlLoader = new FXMLLoader(MainApplication.class.getResource("user-enter-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 400);
         stage.setTitle("Главная");
         stage.setScene(scene);
-        mainController = fxmlLoader.getController();
+        signInController = fxmlLoader.getController();
         stage.show();
     }
 

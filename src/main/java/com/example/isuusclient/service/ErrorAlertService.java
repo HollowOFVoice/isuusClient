@@ -1,6 +1,9 @@
 package com.example.isuusclient.service;
 
+import com.example.isuusclient.entity.StudentsEntity;
+import com.example.isuusclient.entity.UsersEntity;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -40,6 +43,50 @@ public class ErrorAlertService extends Application {
         alert.showAndWait();
     }
 
+    public void showRes(StudentsEntity data, String whatMistakeStr) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Поиск");
+        alert.setHeaderText(whatMistakeStr);
+
+        VBox dialogPaneContent = new VBox();
+
+        Label label = new Label("Найден следующий студент:");
+
+
+        TextArea textArea = new TextArea();
+        textArea.setText(String.valueOf(data));
+
+        dialogPaneContent.getChildren().addAll(label, textArea);
+
+        // Set content for Dialog Pane
+        alert.getDialogPane().setContent(dialogPaneContent);
+
+        alert.showAndWait();
+    }
+
+    public void showResUserCheck(UsersEntity data, String whatMistakeStr) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Поиск");
+        alert.setHeaderText(whatMistakeStr);
+
+        VBox dialogPaneContent = new VBox();
+
+        Label label = new Label("Найден следующий студент:");
+
+
+        TextArea textArea = new TextArea();
+        textArea.setText(String.valueOf(data));
+
+        dialogPaneContent.getChildren().addAll(label, textArea);
+
+        // Set content for Dialog Pane
+        alert.getDialogPane().setContent(dialogPaneContent);
+
+        alert.showAndWait();
+    }
+
+
+
     public void didntStart(Exception e) {
         String whatMistakeStr = "Проверьте, возможноо провайдер отрезал кабель, или кто-то не тыкнул на кнопку запуска сервера!";
         showError(e, whatMistakeStr);
@@ -47,6 +94,27 @@ public class ErrorAlertService extends Application {
     public void dinStart() {
         String whatMistakeStr = "Проверьте, возможноо провайдер отрезал кабель, или кто-то не тыкнул на кнопку запуска сервера!";
         showAlertWithHeaderText(whatMistakeStr);
+    }
+
+    public void dinfound(Exception e) {
+        String whatMistakeStr = "Студента с таким номером зачетной книжки не существует! Попробуйте проверить, верность введенных данных";
+        showAlertWithHeaderText222(whatMistakeStr);
+    }
+
+    public void dinfoundUser() {
+        String whatMistakeStr = "Пользователья с такими данными не существует!";
+        showAlertWithHeaderText222(whatMistakeStr);
+    }
+
+//    public void found(ObservableList<StudentsEntity> data) {
+//        String whatMistakeStr = "Результат поиска: ( "+data+" )                                                            ";
+//        showAlertWithHeaderText222(whatMistakeStr);
+//    }
+
+
+    public void found(StudentsEntity students) {
+        String whatMistakeStr = "Результат поиска: ( "+students+" )                                                            ";
+        showAlertWithHeaderText222(whatMistakeStr);
     }
 
     public void addVoid(Exception e) {
@@ -66,11 +134,30 @@ public class ErrorAlertService extends Application {
         alert.setX(bounds.getMaxX() - 800);
         alert.setY(bounds.getMaxY() - 650);
         alert.setTitle("Atempshon!");
-        alert.setHeaderText("Смотри что пишешь!");
+        alert.setHeaderText("Внимание!");
         alert.setContentText(whatMistakeStr);
 
         alert.showAndWait();
     }
+
+
+
+
+
+
+    private void showAlertWithHeaderText222(String whatMistakeStr) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
+        alert.setX(bounds.getMaxX() - 800);
+        alert.setY(bounds.getMaxY() - 650);
+        alert.setTitle("Поиск");
+        alert.setHeaderText("Результаты поиска: ");
+        alert.setContentText(whatMistakeStr);
+
+        alert.showAndWait();
+    }
+
+
     public void incorrectInput() {
         String whatMistakeStr = "\nВ полях со звездочкой данные должны начинаться с большой буквы, воспринимается только кириллица, English nein! Цифры nein!";
         showAlertWithHeaderText(whatMistakeStr);

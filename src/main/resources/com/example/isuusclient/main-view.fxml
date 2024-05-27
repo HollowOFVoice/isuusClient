@@ -63,15 +63,15 @@
    <bottom>
       <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="BOTTOM_LEFT">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#addStudent" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addStudent" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button mnemonicParsing="false" onAction="#changeStudent" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE">
+            <Button fx:id="changeButton" mnemonicParsing="false" onAction="#changeStudent" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE">
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>

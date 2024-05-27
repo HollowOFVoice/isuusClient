@@ -4,16 +4,11 @@ import com.example.isuusclient.MainApplication;
 import com.example.isuusclient.Response.DataResponse;
 import com.example.isuusclient.Response.ListResponse;
 import com.example.isuusclient.controller.MainController;
-import com.example.isuusclient.controller.SignInController;
-import com.example.isuusclient.entity.StudentsEntity;
 import com.example.isuusclient.entity.UsersEntity;
 import com.google.gson.reflect.TypeToken;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import lombok.Getter;
 
 import java.io.IOException;
@@ -28,6 +23,7 @@ public class SignInService {
     JsonService service = new JsonService();
     private FXMLLoader fxmlLoader;
     private static MainController mainController;
+    public static UsersEntity rol = new UsersEntity();
 
 
     ClientProperties prop = new ClientProperties();
@@ -67,19 +63,47 @@ public class SignInService {
 
 
 
-    public void checkUserData(UsersEntity data) throws IOException {
+    public UsersEntity checkUserData(UsersEntity data) throws IOException {
         //String url = "http://localhost:2825/api/v1/user?username=" + username + "&password=" + password;
         String temp = http.get(prop.getCheckUser() + data.getUsername()+"&password="+data.getPassword());
         DataResponse<UsersEntity> respose = service.getObject(temp, dataType);
         if (respose.isSuccess()){
             //alertService.showResUserCheck(respose.getData(),"Найдено совпадение по вашим данным!");
             MainApplication.start2("Главная");
+            this.data.addAll(respose.getData());
+
+
             
         }else{
 
             alertService.dinfoundUser();
 
         }
+return data;
     }
+
+
+
+    public UsersEntity checkUser(UsersEntity data) throws IOException {
+        //String url = "http://localhost:2825/api/v1/user?username=" + username + "&password=" + password;
+        String temp = http.get(prop.getCheckUser() + data.getUsername()+"&password="+data.getPassword());
+        DataResponse<UsersEntity> respose = service.getObject(temp, dataType);
+        if (respose.isSuccess()){
+            //alertService.showResUserCheck(respose.getData(),"Найдено совпадение по вашим данным!");
+
+            this.data.addAll(respose.getData());
+
+
+
+        }else{
+
+
+
+        }
+return data;
+    }
+
+
+
 
 }

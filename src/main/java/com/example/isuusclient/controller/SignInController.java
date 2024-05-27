@@ -26,13 +26,17 @@ ErrorAlertService alertService = new ErrorAlertService();
     @FXML
     private TextField passwordField;
 
+    public static UsersEntity rolis;
+
     @FXML
     void enter(ActionEvent event) throws IOException {
 try {
+
     UsersEntity usersEntity = new UsersEntity();
     usersEntity.setUsername(loginField.getText());
     usersEntity.setPassword(passwordField.getText());
-    service.checkUserData(usersEntity);
+
+    rolis=service.checkUserData(usersEntity);
 
 }catch (Exception e){
     alertService.didntStart(e);

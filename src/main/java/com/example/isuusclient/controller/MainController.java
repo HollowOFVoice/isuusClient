@@ -2,10 +2,11 @@ package com.example.isuusclient.controller;
 
 import com.example.isuusclient.MainApplication;
 import com.example.isuusclient.entity.StudentsEntity;
-
+import com.example.isuusclient.entity.UsersEntity;
 
 import com.example.isuusclient.service.ErrorAlertService;
 import com.example.isuusclient.service.HttpService;
+import com.example.isuusclient.service.SignInService;
 import com.example.isuusclient.service.StudentService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,12 +17,27 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 
+import java.io.IOException;
 import java.util.Optional;
+
+import static com.example.isuusclient.service.SignInService.rol;
 
 @Getter
 @Setter
 public class MainController {
+
+
+    @FXML
+    private Button addButton;
+
+    @FXML
+    private Button changeButton;
+
+    @FXML
+    private Button deleteButton;
+
 
     @FXML
     private TableColumn<StudentsEntity, String> historyColumn;
@@ -53,6 +69,8 @@ public class MainController {
     private TableColumn<StudentsEntity, String> surnameTable;
    StudentService service = new StudentService();
     private final ErrorAlertService alertService = new ErrorAlertService();
+
+SignInController tub= new SignInController();
 
     @FXML
         void searchByRecBook(ActionEvent event) {
@@ -131,8 +149,43 @@ public class MainController {
         }catch (Exception e){alertService.didntStart(e);}
     }
 
+
+//    public void checkRol() throws IOException {
+//        SignInService signInService = new SignInService();
+//        UsersEntity usersEntity = new UsersEntity();
+//        UsersEntity usersEntity1 = new UsersEntity();
+//
+//        usersEntity.setUsername("admin");
+//        usersEntity.setPassword("min");
+//
+//   usersEntity1 = signInService.checkData(usersEntity);
+//
+//
+//        if (usersEntity == usersEntity1) {
+//            addButton.setVisible(false);
+//        }
+//    }
+
+    @SneakyThrows
     @FXML
-    private void initialize(){
+    private void initialize()  {
+
+//
+//        SignInService signInService = new SignInService();
+//        UsersEntity usersEntity = new UsersEntity();
+//        UsersEntity usersEntity1 = new UsersEntity();
+//
+//        UsersEntity data ;
+//        usersEntity.setUsername("admin");
+//        usersEntity.setPassword("min");
+//signInService.();
+//
+//        if (usersEntity.equals(usersEntity1)){
+//            addButton.setVisible(false);
+//        }
+
+
+
         //получаем список с сервера
         service.getAll();
         //связываем поля таблицы со столбцами
@@ -143,6 +196,9 @@ public class MainController {
         specialTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("special"));
         recbookTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("recordBook"));
        studentTable.setItems(service.getData());
+
+
+
     }
 
 

@@ -15,7 +15,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.Getter;
-
+import static com.example.isuusclient.MainApplication.sign;
+import static com.example.isuusclient.MainApplication.signserv;
 import java.io.IOException;
 import java.lang.reflect.Type;
 
@@ -26,8 +27,8 @@ public class SignInService {
     private final ErrorAlertService alertService = new ErrorAlertService();
     private  final HttpService http = new HttpService();
     JsonService service = new JsonService();
-    private FXMLLoader fxmlLoader;
-    private static MainController mainController;
+
+
 
 
     ClientProperties prop = new ClientProperties();
@@ -35,20 +36,6 @@ public class SignInService {
     }.getType();
     private Type listType = new TypeToken<ListResponse<UsersEntity>>() {
     }.getType();
-
-
-//    public void userfindForCheck(UsersEntity data){
-//        String temp = http.get(prop.getCheckUser() + data.getUsername()+data.getPassword());
-//        DataResponse<UsersEntity> respose = service.getObject(temp, dataType);
-//        if (respose.isSuccess()){
-//
-//            alertService.dinfoundUser();
-//        }else{
-//
-//            alertService.showResUserCheck(respose.getData(),"Найдено совпадение по вашим данным!");
-//
-//        }
-//    }
 
 
 
@@ -67,19 +54,21 @@ public class SignInService {
 
 
 
-    public void checkUserData(UsersEntity data) throws IOException {
+    public UsersEntity checkUserData(UsersEntity data) throws IOException {
         //String url = "http://localhost:2825/api/v1/user?username=" + username + "&password=" + password;
         String temp = http.get(prop.getCheckUser() + data.getUsername()+"&password="+data.getPassword());
         DataResponse<UsersEntity> respose = service.getObject(temp, dataType);
         if (respose.isSuccess()){
             //alertService.showResUserCheck(respose.getData(),"Найдено совпадение по вашим данным!");
             MainApplication.start2("Главная");
-            
+            this.data.addAll(respose.getData());
+
         }else{
 
             alertService.dinfoundUser();
 
         }
+        return respose.getData();
     }
 
 }

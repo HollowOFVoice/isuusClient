@@ -4,6 +4,7 @@ import com.example.isuusclient.MainApplication;
 import com.example.isuusclient.entity.StudentsEntity;
 
 
+import com.example.isuusclient.entity.UsersEntity;
 import com.example.isuusclient.service.ErrorAlertService;
 import com.example.isuusclient.service.HttpService;
 import com.example.isuusclient.service.StudentService;
@@ -16,12 +17,25 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 
 import java.util.Optional;
+
+import static com.example.isuusclient.MainApplication.sign;
+import static com.example.isuusclient.MainApplication.signserv;
 
 @Getter
 @Setter
 public class MainController {
+
+    @FXML
+    private Button addButton;
+
+    @FXML
+    private Button changeButton;
+
+    @FXML
+    private Button deleteButton;
 
     @FXML
     private TableColumn<StudentsEntity, String> historyColumn;
@@ -131,8 +145,27 @@ public class MainController {
         }catch (Exception e){alertService.didntStart(e);}
     }
 
+    @SneakyThrows
     @FXML
     private void initialize(){
+
+                UsersEntity usersEntity = new UsersEntity();
+        UsersEntity usersEntity1 = new UsersEntity();
+
+
+
+        usersEntity.setUsername("asd");
+        usersEntity.setPassword("asd");
+
+        signserv.checkUserData(usersEntity1);
+
+
+        if (usersEntity.equals(service.getData())){
+            addButton.setVisible(false);
+        }
+
+
+
         //получаем список с сервера
         service.getAll();
         //связываем поля таблицы со столбцами

@@ -4,6 +4,8 @@ import com.example.isuusclient.controller.MainController;
 import com.example.isuusclient.controller.SignInController;
 import com.example.isuusclient.controller.StudentsAddController;
 import com.example.isuusclient.entity.StudentsEntity;
+import com.example.isuusclient.entity.UsersEntity;
+import com.example.isuusclient.service.SignInService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,7 +21,8 @@ public class MainApplication extends Application {
     private FXMLLoader fxmlLoader;
     private static MainController mainController;
     private static SignInController signInController;
-
+    public static UsersEntity sign;
+    public static SignInService signserv;
 
 
 
@@ -29,6 +32,7 @@ public class MainApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 350);
         stage.setTitle("Вход в систему");
         stage.setScene(scene);
+
         signInController = fxmlLoader.getController();
         stage.show();
 
@@ -47,6 +51,7 @@ public class MainApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1200, 600);
 
         stage.setScene(scene);
+
         mainController = fxmlLoader.getController();
         stage.show();
     }

@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.isuusclient.MainApplication.*;
+//import static com.example.isuusclient.MainApplication.signInController;
+
 public class SignInController {
 ErrorAlertService alertService = new ErrorAlertService();
     SignInService service = new SignInService();
@@ -29,10 +32,16 @@ ErrorAlertService alertService = new ErrorAlertService();
     @FXML
     void enter(ActionEvent event) throws IOException {
 try {
-    UsersEntity usersEntity = new UsersEntity();
-    usersEntity.setUsername(loginField.getText());
-    usersEntity.setPassword(passwordField.getText());
-    service.checkUserData(usersEntity);
+    userAdmin.setUsername("admin");
+    userAdmin.setPassword("12345");
+    //UsersEntity usersEntity = new UsersEntity();
+    userInf.setUsername(loginField.getText());
+    userInf.setPassword(passwordField.getText());
+
+    signserv.checkUserData(userInf);
+
+
+
 
 }catch (Exception e){
     alertService.didntStart(e);

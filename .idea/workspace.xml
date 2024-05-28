@@ -7,8 +7,19 @@
     <list default="true" id="d74ef24c-34ea-4b49-a10a-5b5d10a0c148" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/AssessmenListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/GroupListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/LessonListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/controller/SpecialListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/entity/UsersEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SignInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/SignInService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/assessmen-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/assessmen-list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/group-list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/lesson-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/lesson-list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/special-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/isuusclient/special-list.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +158,9 @@
       <workItem from="1716879688778" duration="442000" />
       <workItem from="1716880203737" duration="1336000" />
       <workItem from="1716881814637" duration="259000" />
-      <workItem from="1716886737765" duration="1584000" />
+      <workItem from="1716886737765" duration="2824000" />
+      <workItem from="1716896130600" duration="6878000" />
+      <workItem from="1716919607038" duration="5364000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -173,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716881500927</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1716888792513</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716888792513</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,31 +219,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/StudentService.java</url>
           <line>18</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/isuusclient/service/ClientProperties.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

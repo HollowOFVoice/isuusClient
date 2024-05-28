@@ -61,14 +61,14 @@ public class SignInService {
         if (respose.isSuccess()){
             //alertService.showResUserCheck(respose.getData(),"Найдено совпадение по вашим данным!");
             MainApplication.start2("Главная");
-            this.data.addAll(respose.getData());
+           return respose.getData();
 
         }else{
 
             alertService.dinfoundUser();
 
         }
-        return data;
+        return null;
     }
 
 }

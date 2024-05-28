@@ -10,24 +10,25 @@ import com.example.isuusclient.service.HttpService;
 import com.example.isuusclient.service.StudentService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Optional;
 
-import static com.example.isuusclient.MainApplication.sign;
-import static com.example.isuusclient.MainApplication.signserv;
+import static com.example.isuusclient.MainApplication.*;
 
 @Getter
 @Setter
 public class MainController {
+
+    @FXML
+    private ButtonBar buttonBar;
+
 
     @FXML
     private Button addButton;
@@ -77,7 +78,7 @@ public class MainController {
             service.findByRec(studentsEntity);
             MainApplication.showDialog("main-view.fxml", "Главная");
         }catch (Exception e){
-           alertService.didntStart(e);
+
         }
     }
 
@@ -154,22 +155,19 @@ public class MainController {
     @SneakyThrows
     @FXML
     private void initialize(){
+        if (userAdmin.equals(userInf)) {
+           addButton.setVisible(true);
+           changeButton.setVisible(true);
+           deleteButton.setVisible(true);
+        } else {
+            addButton.setVisible(false);
+            changeButton.setVisible(false);
+            deleteButton.setVisible(false);
+        }
 
-                UsersEntity usersEntity = new UsersEntity();
-        UsersEntity usersEntity1 = new UsersEntity();
+System.out.println("Установленный: "+userAdmin.getUsername()+" "+userAdmin.getPassword());
 
-
-
-        usersEntity.getUsername();
-        usersEntity.getPassword();
-        signserv.checkUserData(usersEntity);
-        System.out.println(signserv.getData());
-//        if (usersEntity.equals(signserv.getData())){
-//            addButton.setVisible(true);
-//        }else addButton.setVisible(false);
-
-
-
+        System.out.println("Введенный: "+userInf.getUsername()+" "+userInf.getPassword());
         //получаем список с сервера
         service.getAll();
         //связываем поля таблицы со столбцами
@@ -181,7 +179,6 @@ public class MainController {
         recbookTable.setCellValueFactory(new PropertyValueFactory<StudentsEntity, String>("recordBook"));
        studentTable.setItems(service.getData());
     }
-
 
 
 

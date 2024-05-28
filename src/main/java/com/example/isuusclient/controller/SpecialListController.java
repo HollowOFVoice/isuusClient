@@ -19,6 +19,9 @@ import javafx.stage.Stage;
 
 import java.util.Optional;
 
+import static com.example.isuusclient.MainApplication.userAdmin;
+import static com.example.isuusclient.MainApplication.userInf;
+
 public class SpecialListController {
 
     private final ErrorAlertService alertService = new ErrorAlertService();
@@ -28,46 +31,35 @@ public class SpecialListController {
     private Button backButton;
 
     @FXML
+    private Button addButton;
+
+    @FXML
+    private Button deleteButton;
+
+    @FXML
     private TableColumn<SpecialsEntity, String> specialColumn;
 
     @FXML
     private TableView<SpecialsEntity> specialTable;
 
-
-
-
-
-//    private Optional<SpecialsEntity> specials = Optional.empty();
-//    public void setStudent(Optional<SpecialsEntity> specials){
-//        try{
-//            this.specials = specials;
-//            if (specials.isPresent()) {
-//                if (specials.get().getId() != null)
-//                    service.update(specials.get(), specialTable.getSelectionModel().getSelectedItem());
-//                else service.add(specials.get());
-//            }
-//        }catch (Exception e){
-//            alertService.addVoid(e);
-//        }
-
-//    }
-
     //скорее всего, чтобы после добавления таблица автоматичеки обновлялась,
     //Нужно делать через обсервабл лист
 
-
     @FXML
     private void initialize(){
+        if (userAdmin.equals(userInf)) {
+            addButton.setVisible(true);
+            deleteButton.setVisible(true);
+        } else {
+            addButton.setVisible(false);
+            deleteButton.setVisible(false);
+        }
+
         service.getAll();
         specialColumn.setCellValueFactory(new PropertyValueFactory<SpecialsEntity, String>("special"));
         specialTable.setItems(service.getData());
 
     }
-//    private ObservableList<SpecialsEntity> data;
-//    public void setData(ObservableList<SpecialsEntity> data) {
-//        this.data = data ;
-//    }
-
 
 
     @FXML

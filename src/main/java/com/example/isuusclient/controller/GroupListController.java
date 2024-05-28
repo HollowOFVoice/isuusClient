@@ -16,6 +16,9 @@ import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
 
+import static com.example.isuusclient.MainApplication.userAdmin;
+import static com.example.isuusclient.MainApplication.userInf;
+
 @Getter
 @Setter
 public class GroupListController {
@@ -32,6 +35,13 @@ public class GroupListController {
     private Button backButton;
 
     @FXML
+    private Button addButton;
+
+
+    @FXML
+    private Button deleteButton;
+
+    @FXML
     private void addGroup(){
         MainApplication.showDialog("add-group-view.fxml","Добавить группу");
     }
@@ -41,13 +51,7 @@ public class GroupListController {
             MainApplication.showDialog2("assessmen-list.fxml", "Список специальностей");
         }catch (Exception e){alertService.didntStart(e);}
         }
-    @FXML
-    private void initialize(){
-        service.getAll();
-        groupColumn.setCellValueFactory(new PropertyValueFactory<GroupsEntity, String>("groups"));
-        groupTable.setItems(service.getData());
 
-    }
     @FXML
     void back(ActionEvent event) {
         Stage stage = (Stage) backButton.getScene().getWindow();
@@ -70,13 +74,20 @@ public class GroupListController {
     }
 
 
-//    @FXML
-//    private void initialize(){
-//        //получаем список с сервера
-//        service.getAll();
-//        //связываем поля таблицы со столбцами
-//
-//        groupTable.setItems(service.getData());
-//    }
+    @FXML
+    private void initialize(){
 
+        if (userAdmin.equals(userInf)) {
+            addButton.setVisible(true);
+            deleteButton.setVisible(true);
+        } else {
+            addButton.setVisible(false);
+            deleteButton.setVisible(false);
+        }
+
+        service.getAll();
+        groupColumn.setCellValueFactory(new PropertyValueFactory<GroupsEntity, String>("groups"));
+        groupTable.setItems(service.getData());
+
+    }
 }

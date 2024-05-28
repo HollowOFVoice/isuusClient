@@ -12,6 +12,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static com.example.isuusclient.MainApplication.userAdmin;
+import static com.example.isuusclient.MainApplication.userInf;
+
 public class LessonListController {
 
     private final ErrorAlertService alertService = new ErrorAlertService();
@@ -19,12 +22,15 @@ public class LessonListController {
 
     private boolean addFlag = true;
 
-
+    @FXML
+    private Button addButton;
     @FXML
     private TableColumn<LessonsEntity, String> columnLesson;
 
     @FXML
     private TableView<LessonsEntity> tableLesson;
+    @FXML
+    private Button deleteButton;
 
     @FXML
     private Button backButton;
@@ -63,6 +69,15 @@ public class LessonListController {
 
     @FXML
     private void initialize(){
+
+        if (userAdmin.equals(userInf)) {
+            addButton.setVisible(true);
+            deleteButton.setVisible(true);
+        } else {
+            addButton.setVisible(false);
+            deleteButton.setVisible(false);
+        }
+
         service.getAll();
         columnLesson.setCellValueFactory(new PropertyValueFactory<LessonsEntity, String>("lesson"));
         tableLesson.setItems(service.getData());

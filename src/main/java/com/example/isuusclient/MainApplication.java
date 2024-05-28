@@ -13,16 +13,29 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 
 public class MainApplication extends Application {
     private FXMLLoader fxmlLoader;
     private static MainController mainController;
+    @Getter
+    @Setter
     private static SignInController signInController;
-    public static UsersEntity sign;
+    public static SignInService sign;
     public static SignInService signserv = new SignInService();
+    @Getter
+    @Setter
+    public static UsersEntity userInf = new UsersEntity();
+    @Getter
+    @Setter
+    public static UsersEntity userAdmin = new UsersEntity();
 
 
 
@@ -34,7 +47,7 @@ public class MainApplication extends Application {
         stage.setScene(scene);
 
         
-
+//mainController = fxmlLoader.getController();
         signInController = fxmlLoader.getController();
         stage.show();
 

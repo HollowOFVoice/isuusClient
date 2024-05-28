@@ -14,6 +14,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static com.example.isuusclient.MainApplication.userAdmin;
+import static com.example.isuusclient.MainApplication.userInf;
+
 public class AssessmenListController {
     private final ErrorAlertService alertService = new ErrorAlertService();
     private final AssessmenService service = new AssessmenService();
@@ -35,6 +38,12 @@ public class AssessmenListController {
     private TableColumn<SpecialsEntity, String> specialColumn;
     @FXML
     private Button backButton;
+
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button deleteButton;
+
 
 
     @FXML
@@ -69,6 +78,16 @@ public class AssessmenListController {
 
     @FXML
     private void initialize(){
+
+        if (userAdmin.equals(userInf)) {
+            addButton.setVisible(true);
+            deleteButton.setVisible(true);
+        } else {
+            addButton.setVisible(false);
+            deleteButton.setVisible(false);
+        }
+
+
         service.getAll();
         lessonService.getAll();
 

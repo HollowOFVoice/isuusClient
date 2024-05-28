@@ -154,21 +154,19 @@ public class MainController {
     @SneakyThrows
     @FXML
     private void initialize(){
-//
-//                UsersEntity usersEntity = new UsersEntity();
-//        UsersEntity usersEntity1 = new UsersEntity();
-//
-//
-//
-//        usersEntity.setUsername("asd");
-//        usersEntity.setPassword("asd");
-//
-//        signserv.checkUserData(usersEntity1);
-//
-//
-//        if (usersEntity.equals(service.getData())){
-//            addButton.setVisible(false);
-//        }
+
+                UsersEntity usersEntity = new UsersEntity();
+        UsersEntity usersEntity1 = new UsersEntity();
+
+
+
+        usersEntity.getUsername();
+        usersEntity.getPassword();
+        signserv.checkUserData(usersEntity);
+        System.out.println(signserv.getData());
+//        if (usersEntity.equals(signserv.getData())){
+//            addButton.setVisible(true);
+//        }else addButton.setVisible(false);
 
 
 

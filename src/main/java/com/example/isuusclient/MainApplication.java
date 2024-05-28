@@ -22,7 +22,7 @@ public class MainApplication extends Application {
     private static MainController mainController;
     private static SignInController signInController;
     public static UsersEntity sign;
-    public static SignInService signserv;
+    public static SignInService signserv = new SignInService();
 
 
 

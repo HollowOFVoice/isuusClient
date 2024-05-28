@@ -33,6 +33,8 @@ public class MainApplication extends Application {
         stage.setTitle("Вход в систему");
         stage.setScene(scene);
 
+        
+
         signInController = fxmlLoader.getController();
         stage.show();
 

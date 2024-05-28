@@ -19,6 +19,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
 
+import java.io.IOException;
 import java.util.Optional;
 
 import static com.example.isuusclient.MainApplication.sign;
@@ -144,25 +145,30 @@ public class MainController {
             MainApplication.showDialog2("special-list.fxml", "Список специальностей");
         }catch (Exception e){alertService.didntStart(e);}
     }
+@FXML
+    protected void onHellpButtonClick() throws IOException {
+        Runtime.getRuntime().exec("hh.exe C:\\Users\\User\\Desktop\\primeMOY\\help.chm");
+}
+
 
     @SneakyThrows
     @FXML
     private void initialize(){
-
-                UsersEntity usersEntity = new UsersEntity();
-        UsersEntity usersEntity1 = new UsersEntity();
-
-
-
-        usersEntity.setUsername("asd");
-        usersEntity.setPassword("asd");
-
-        signserv.checkUserData(usersEntity1);
-
-
-        if (usersEntity.equals(service.getData())){
-            addButton.setVisible(false);
-        }
+//
+//                UsersEntity usersEntity = new UsersEntity();
+//        UsersEntity usersEntity1 = new UsersEntity();
+//
+//
+//
+//        usersEntity.setUsername("asd");
+//        usersEntity.setPassword("asd");
+//
+//        signserv.checkUserData(usersEntity1);
+//
+//
+//        if (usersEntity.equals(service.getData())){
+//            addButton.setVisible(false);
+//        }
 
 
 

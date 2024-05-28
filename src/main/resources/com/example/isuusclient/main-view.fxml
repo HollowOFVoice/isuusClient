@@ -16,6 +16,14 @@
    <top>
       <ButtonBar focusTraversable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="TOP_CENTER">
         <buttons>
+            <Button graphicTextGap="3.0" minWidth="60.0" mnemonicParsing="false" onAction="#onHellpButtonClick" prefHeight="24.0" prefWidth="177.0" styleClass="buttons" stylesheets="@iscol.css" text="Справка" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
             <ImageView fitHeight="35.0" fitWidth="30.0">
                <image>
                   <Image url="@lupa.png" />
@@ -63,15 +71,15 @@
    <bottom>
       <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="anchorPaCity" stylesheets="@iscol.css" BorderPane.alignment="BOTTOM_LEFT">
          <buttons>
-            <Button mnemonicParsing="false" onAction="#addStudent" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addStudent" styleClass="buttons" stylesheets="@iscol.css" text="Добавить" textAlignment="CENTER" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button mnemonicParsing="false" onAction="#changeStudent" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE">
+            <Button fx:id="changeButton" mnemonicParsing="false" onAction="#changeStudent" styleClass="buttons" stylesheets="@iscol.css" text="Изменить" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE">
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" styleClass="buttons" stylesheets="@iscol.css" text="Удалить" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
